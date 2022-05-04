@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RePrograma PB</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/page.css">
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/formulario.css">
+    <link rel="stylesheet" href="src/css//alert.css">
 </head>
 
 <body>
@@ -71,15 +73,15 @@
                     <label for="email">
                         <span>E-mail <abbr title="Obrigatório">*</abbr></span>
                         <!-- O input coleta a entrada de dado do usuário -->
-                        <input type="email" id="email" onblur="validateEmail()">
+                        <input type="email" id="email" placeholder="Insira aqui seu email">
                         <span id="msg"></span>
                     </label>
                     <!-- Cada campo fica dentro de uma label -->
                     <label for="passwd">
                         <span>Senha <abbr title="Obrigatório">*</abbr></span>
-                        <input type="password" id="passwd">
+                        <input type="password" id="passwd"  placeholder="Insira aqui sua senha">
                     </label>
-                    <button type="submit">Continuar</button>
+                    <button type="submit" class="btn">Continuar</button>
                 </fieldset>
             </form>
         </section>
@@ -90,6 +92,18 @@
     <footer>
         <p>© Copyright Paraná Banco 2022</p>
     </footer>
+
+    <!--Este é o alert do formulário-->
+    <div class="alert" id="alert">
+        <section class="alert-container">
+            <div>
+                <h3 id="alert-title">Ops!</h3>
+                <span class="material-icons" onclick="closeAlert();">close</span>
+            </div>
+            <p id="alert-msg">Usuário não encontrado.</p>
+            <button class="btn" onclick="closeAlert();">Fechar</button>
+        </section>
+    </div>
 
     <script src="src/js/script.js"></script>
 </body>

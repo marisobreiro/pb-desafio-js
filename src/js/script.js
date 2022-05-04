@@ -26,38 +26,55 @@ const users = [
     }
 ];
 
+/* Alert customizado */
+const alert = document.getElementById('alert');
+const alertMsg = document.getElementById('alert-msg');
+const alertTitle = document.getElementById('alert-title');
+
+function closeAlert() {
+    alert.style.display='none';
+}
+
+function showAlert(title, msg, classe) {
+    alert.style.display='flex';
+    alertTitle.classList.add(classe);
+    alertTitle.innerHTML = title;
+    alertMsg.innerHTML = msg;
+}
+
+/* Validação do form + inputs */
 function ValidateForm(event) {
-    
-    event.preventDefault()
-    const email = document.getElementById('email').value
-    const password = document.getElementById('passwd').value
-    const msg = document.getElementById('msg');
 
+    event.preventDefault();
 
-    function validateEmail() {
-        if(email.target != ' ') {
-            msg.innerHTML = ' ';
-        } else {
-            msg.innerHTML ='O campo email deve ser preenchido!'
-        }
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('passwd').value;
+
+    if (email == '') {
+        showAlert('Ops!', 'O email deve ser informado');
+        return;
     }
-    validateEmail()
-        
-    /*function validaLogin() {
-        const user = users.find(u => u.email === email);
-        
-        if (user != undefined && user.email == email) {  
-            if (password == 127) {
-                console.log('Sucesso!');
-                window.alert('Seja bem vindo!');
-            } else {
-                window.alert('Senha inválida! Tente novamente');
-            }
-        } else {
-           // window.alert('Usuário não encontrado!');
-        }
+
+    if (password == '') {
+        showAlert('Ops!', 'A senha deve ser informada', 'error');
+        return;
     }
-    validaLogin();
+
+    const user = users.find(u => u.email === email);
+
+    if (user == undefined) {
+        showAlert('Ops!', 'Usuário não encontrado');
+        return;
+    }
+
+    if (password != 127) {
+        showAlert('Ops!', 'Senha inválida, tente novamente', 'error');
+        return;
+    }
+
+    showAlert('Sucesso!', 'Seja bem vindo ao RePrograma!', 'success');
+}
+
     /*
         1. Referenciar elementos dos campos do formulário pelo ID;
         2. Verificar se a senha e o e-mail estão válidos;
@@ -65,4 +82,3 @@ function ValidateForm(event) {
 
         Plus: Alertar o usuário quando o e-mail ou senha estiverem vazios ou incorretos.
     */
-}

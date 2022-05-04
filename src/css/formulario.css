@@ -38,7 +38,7 @@ form input {
 }
 
 /* Botão de envio do formulario  */
-form button {
+.btn {
     display: block;
     width: 100%;
     max-width: 360px;
@@ -53,8 +53,8 @@ form button {
     cursor: pointer;
 }
 
-form button:hover,
-form button:focus {
+.btn:hover,
+.btn:focus {
     background: white;
     color: var(--purple);
 }
