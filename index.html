@@ -66,14 +66,15 @@
                         Continue para acessar informações do RePrograma e não perder as próximas
                         edições.
                     </legend>
-                     <!-- A tag <label> serve para colocar um texto junto do campo do form
+                    <!-- A tag <label> serve para colocar um texto junto do campo do form
                     O for indica sobre qual elemento input é o texto na tela -->
                     <label for="email">
                         <span>E-mail <abbr title="Obrigatório">*</abbr></span>
-                         <!-- O input coleta a entrada de dado do usuário -->
-                        <input type="email" id="email">
+                        <!-- O input coleta a entrada de dado do usuário -->
+                        <input type="email" id="email" onblur="validateEmail()">
+                        <span id="msg"></span>
                     </label>
-                     <!-- Cada campo fica dentro de uma label -->
+                    <!-- Cada campo fica dentro de uma label -->
                     <label for="passwd">
                         <span>Senha <abbr title="Obrigatório">*</abbr></span>
                         <input type="password" id="passwd">

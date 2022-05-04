@@ -32,6 +32,11 @@ form input {
     color: var(--purple);
 }
 
+#msg {
+    color: rgb(170, 28, 28);
+    display: none;
+}
+
 /* Botão de envio do formulario  */
 form button {
     display: block;
