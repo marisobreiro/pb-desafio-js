@@ -27,16 +27,15 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-   header {
-       display: block;
-       padding: 0 20px;
-   }
-   nav li {
-       display: block;
-       width: 100%;
-   }
+    header {
+        display: block;
+        padding: 0 20px;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+    }
 }
-
 
 #logout {
     display: none;

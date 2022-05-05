@@ -37,15 +37,11 @@ function closeAlert() {
 }
 
 function showAlert(icon, title, msg, classe) {
+    alertIcon.classList.add(classe); // Modifica a cor do ícone do alerta
+    alertIcon.innerHTML = icon // Modifica o ícone exibido no alerta do Material Icons
+    alertTitle.innerHTML = title; // Modifica o conteúdo do título do alerta
+    alertMsg.innerHTML = msg; // Modifica o conteúdo da mensagem do alerta
     alert.style.display='flex';
-
-    function customAlert() {
-        alertIcon.classList.add(classe); // Modifica a cor do ícone do alerta
-        alertIcon.innerHTML = icon // Modifica o ícone exibido no alerta do Material Icons
-        alertTitle.innerHTML = title; // Modifica o conteúdo do título do alerta
-        alertMsg.innerHTML = msg; // Modifica o conteúdo da mensagem do alerta
-    }
-    customAlert();
 }
 
 /* Escondendo campos de login e mostrando link para logout */
@@ -88,5 +84,5 @@ function ValidateForm(event) {
     }
     window.scrollTo(0,0) // Retorna a página do início
     hideLogin(); // Esconde o form de login e adiciona um link para logout na nav
-    showAlert('done', 'Sucesso!', 'Seja bem vindo ao RePrograma!', 'success');
+    showAlert('done', 'Sucesso!', 'Seja bem-vindo(a) ao RePrograma!', 'success');
 }
