@@ -30,55 +30,63 @@ const users = [
 const alert = document.getElementById('alert');
 const alertMsg = document.getElementById('alert-msg');
 const alertTitle = document.getElementById('alert-title');
+const alertIcon = document.getElementById('alert-icon');
 
 function closeAlert() {
-    alert.style.display='none';
+    alert.style.display='none'; 
 }
 
-function showAlert(title, msg, classe) {
+function showAlert(icon, title, msg, classe) {
     alert.style.display='flex';
-    alertTitle.classList.add(classe);
-    alertTitle.innerHTML = title;
-    alertMsg.innerHTML = msg;
+
+    function customAlert() {
+        alertIcon.classList.add(classe); // Modifica a cor do ícone do alerta
+        alertIcon.innerHTML = icon // Modifica o ícone exibido no alerta do Material Icons
+        alertTitle.innerHTML = title; // Modifica o conteúdo do título do alerta
+        alertMsg.innerHTML = msg; // Modifica o conteúdo da mensagem do alerta
+    }
+    customAlert();
+}
+
+/* Escondendo campos de login e mostrando link para logout */
+function hideLogin() {
+    const login = document.getElementById('cadastro');
+    const logout = document.getElementById('logout');
+
+    login.classList.add('hide');
+    logout.classList.add('show');
 }
 
 /* Validação do form + inputs */
 function ValidateForm(event) {
 
     event.preventDefault();
-
     const email = document.getElementById('email').value;
     const password = document.getElementById('passwd').value;
 
+    /* Validação do campo email vazio */
     if (email == '') {
-        showAlert('Ops!', 'O email deve ser informado');
+        showAlert('error', 'Ops!', 'O email deve ser informado', 'error');
         return;
     }
-
+    /* Validação do campo senha vazio */
     if (password == '') {
-        showAlert('Ops!', 'A senha deve ser informada', 'error');
+        showAlert('error', 'Ops!', 'A senha deve ser informada', 'error');
         return;
     }
-
+    /* Validação do email de cadastro X informado no input */
     const user = users.find(u => u.email === email);
 
     if (user == undefined) {
-        showAlert('Ops!', 'Usuário não encontrado');
+        showAlert('error', 'Ops!', 'Usuário não encontrado', 'error');
         return;
     }
-
+    /* Validação da senha informada no input */
     if (password != 127) {
-        showAlert('Ops!', 'Senha inválida, tente novamente', 'error');
+        showAlert('error', 'Ops!', 'Senha inválida, tente novamente', 'error');
         return;
     }
-
-    showAlert('Sucesso!', 'Seja bem vindo ao RePrograma!', 'success');
+    window.scrollTo(0,0) // Retorna a página do início
+    hideLogin(); // Esconde o form de login e adiciona um link para logout na nav
+    showAlert('done', 'Sucesso!', 'Seja bem vindo ao RePrograma!', 'success');
 }
-
-    /*
-        1. Referenciar elementos dos campos do formulário pelo ID;
-        2. Verificar se a senha e o e-mail estão válidos;
-        3. Se tudo estiver ok, alertar o usuário que o formulário foi submetido;
-
-        Plus: Alertar o usuário quando o e-mail ou senha estiverem vazios ou incorretos.
-    */

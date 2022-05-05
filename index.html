@@ -31,6 +31,7 @@
                 <li><a href="#">Sobre o RePrograma</a></li>
                 <li><a href="#">Vagas</a></li>
                 <li><a href="#">Edições anteriores</a></li>
+                <li id="logout"><a href="/">Sair</a></li>
             </ul>
         </nav>
     </header>
@@ -58,7 +59,7 @@
             </aside>
         </section>
 
-        <section class="cadastro">
+        <section class="cadastro" id="cadastro">
             <h3>Fique por dentro das novidades</h3>
 
             <!-- Formulário de cadastro -->
@@ -96,12 +97,13 @@
     <!--Este é o alert do formulário-->
     <div class="alert" id="alert">
         <section class="alert-container">
+            <span class="material-icons btn-close" onclick="closeAlert();">close</span>
             <div>
+                <span class="material-icons" id="alert-icon">done</span>
                 <h3 id="alert-title">Ops!</h3>
-                <span class="material-icons" onclick="closeAlert();">close</span>
             </div>
             <p id="alert-msg">Usuário não encontrado.</p>
-            <button class="btn" onclick="closeAlert();">Fechar</button>
+            <button onclick="closeAlert();">Fechar</button>
         </section>
     </div>
 

@@ -58,3 +58,7 @@ form input {
     background: white;
     color: var(--purple);
 }
+
+.hide {
+    display: none;
+}

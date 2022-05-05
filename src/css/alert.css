@@ -17,38 +17,64 @@
     flex-direction: column;
     justify-content: space-between;
     width: 20rem;
-    height: 10rem;
+    height: 15rem;
     background-color: #FFF;
     border-radius: 5px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
     padding: 1rem;
+    text-align: center;
 }
+
 
 .alert div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0.5rem 0;
-}
-
-.alert main {
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0;
+    padding-bottom: 1rem;
+}
+
+
+#alert-icon {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Botões */
+
+.btn-close {
+    align-self: flex-end;
+    color: #BBBBBB;
+    cursor: pointer;
+}
+
+.btn-close:active, .btn-close:hover {
+    color: black;
 }
 
 .alert button {
-    width: auto !important;
-    margin: 0;
     align-self: flex-end;
-    border-color: var(--purple);
-    color: var(--purple);
+    background-color: transparent;
+    border: 2px solid #BBBBBB;
+    border-radius: 5px;
+    color: black;
+    font: bold 16px Roboto, Arial, Helvetica, sans-serif;
+    margin: 1rem 0 0 0;
+    padding: 0.8rem;
+    width: auto !important;
+}
+
+.alert button:hover {
+    background-color: #BBBBBB;
 }
 
 .error {
-    color: red !important;
+    color: #E17272;
 }
 
 .success {
-    color: var(--purple) !important;
+    color: var(--purple);
 }
