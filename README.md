@@ -1,81 +1,38 @@
-# Repositório com estrutura básica para projeto
+# Desafio inicial RePrograma - JS
 
-Olá!
+Repositório do projeto inicial do processo seletivo rePrograma do Paraná Banco. 
 
-Aqui você vai encontrar uma estrutura básica para montar o seu primeiro projeto de front-end e construir a sua primeira página usando HTML, CSS e Javascript.
+## Problema proposto
 
-É só clonar esse repositório na sua máquina e usar essa estrutura para começar um novo projeto. :)
+Para esse desafio, foram solicitados:
 
----
+- [x] Referenciar elementos dos campos do formulário pelo ID;
+- [x] Verificar se a senha e o e-mail estão válidos;
+- [x] Se tudo estiver ok, alertar o usuário que o formulário foi submetido;
 
-## **JAVASCRIPT:**
+Plus
 
-Existem algumas funcionalidades no Javascript, que utilizamos no nosso dia-a-dia, e que facilitam muito nossa vida na hora de conseguir achar algum dado específico ou até mesmo escrever uma funcionalidade nova.
+- [x] Alertar o usuário quando o e-mail ou senha estiverem vazios ou incorretos;
 
-No ES6, temos algumas funcionalidades que são muito utilizadas diariamente. São elas:
+## Stack utilizada
+- HTML5
+- CSS3
+- JavaScript
+- Material Icons
 
-![enter image description here](https://raw.githubusercontent.com/kimuradev/gh-assets/master/assets/javascript.jpg)
+## Como inicializar?
 
+Realize o clone deste repositório na pasta de sua preferência em seu terminal
+`git@github.com:marisobreiro/pb-desafio-js.git`
 
-E aqui começa o **1 º Desafio:**
+Na pasta do repositório, abra o arquivo `index.html` em seu navegador de preferência
 
-A partir do array de objetos abaixo contendo login, email e idade:
+## Sobre o projeto
 
-```
-const users = [
-	{
-		login: 'brunohs',
-		email: 'brunohs@pbtech.net.br',
-		age: 18
-	},
-	{
-		login: 'thainabcc',
-		email: 'thaina.biudes@gmail.com',
-		age: 25
-	},
-	{
-		login: 'annecl',
-		email: 'annecl@pbtech.net.br',
-		age: 34
-	},
-   	{
-        	login: 'willianfl',
-	        email: 'willianfl@pbtech.net.br',
-        	age: 30
-	},
-    	{
-        	login: 'lucasplc',
-	        email: 'lucasplc@pbtech.net.br',
-        	age: 20
-	}
-];
-```
+Foram adicionadas as validações de inputs, validações do login, alerts em formato de modais para o usuário e uma adaptação da página para o usuário logado. 
 
-- Criar uma função para somar a idade de todos os usuários na lista
-- Criar uma função para validar se o login existe dentro do objeto
-- Criar uma função para mostrar todos os emails no console.log
-- Criar uma função para contar quantos usuários possuem e-mail da empresa pbtech.net.br
+## Mockup - Alert
 
-> **Importante**: cada uma das funções acima, deve utilizar pelo menos uma das funções do javascript descritas na imagem. (map, filter, find, reduce)
+Realizei a prototipação inicial do alert utilizando o Figma. 
 
-**2 º Desafio:** 
-
-Com todas as funções criadas, você deve utilizá-las na landing page do Reprograma, para digitar e-mail e senha, e em seguida clicar no botão "Continuar".
-
-> O campo login deve ser preenchido com um login existente no array de objetos do modelo passado acima, e a senha é a soma das idades dos usuários da lista.
-
-- Você deve utilizar a função criada para validar se o login existe e comparar com o login que você digitou
-- Você deve utilizar a função criada para somar as idades e comparar com a senha que você digitou.
-- Caso o login e senha estejam corretos, você deve alertar o usuário que o formulário foi submetido.
-
-> **Plus**: Alertar o usuário quando o e-mail ou senha estiverem vazios ou incorretos.
-
-> Links de referência:
->
-> - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
-> - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-> - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
-> - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-> - [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search)
-
----
+Segui o design do projeto inicial conforme imagens a seguir:
