@@ -36,3 +36,10 @@ Foram adicionadas as validações de inputs, validações do login, alerts em fo
 Realizei a prototipação inicial do alert utilizando o Figma. 
 
 Segui o design do projeto inicial conforme imagens a seguir:
+
+
+<img width="395" alt="Captura de Tela 2022-05-05 às 17 21 35" src="https://user-images.githubusercontent.com/91204232/167019666-a4da4171-197a-4997-8fc8-c2dd34834322.png">
+
+<img width="402" alt="Captura de Tela 2022-05-05 às 17 21 49" src="https://user-images.githubusercontent.com/91204232/167019708-fb8d3770-16e1-40fc-b771-64f361f002b4.png">
+
+
