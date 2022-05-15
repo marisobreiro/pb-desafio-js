@@ -1,8 +1,11 @@
-# Desafio inicial RePrograma - JS
+# Desafio inicial - JS
+
+## 💻 Sobre
 
 Repositório do projeto inicial do processo seletivo rePrograma do Paraná Banco. 
 
-## Problema proposto
+
+## 🧗‍♀️ Problema proposto
 
 Para esse desafio, foram solicitados:
 
@@ -14,24 +17,26 @@ Plus
 
 - [x] Alertar o usuário quando o e-mail ou senha estiverem vazios ou incorretos;
 
-## Stack utilizada
+Foram adicionadas as validações de inputs, validações do login, alerts em formato de modais para o usuário e uma adaptação da página para o usuário logado. 
+
+
+## 💾 Stack utilizada
+
 - HTML5
 - CSS3
 - JavaScript
 - Material Icons
 
-## Como inicializar?
+
+## 🔨 Como inicializar?
 
 Realize o clone deste repositório na pasta de sua preferência em seu terminal
 `git@github.com:marisobreiro/pb-desafio-js.git`
 
 Na pasta do repositório, abra o arquivo `index.html` em seu navegador de preferência
 
-## Sobre o projeto
 
-Foram adicionadas as validações de inputs, validações do login, alerts em formato de modais para o usuário e uma adaptação da página para o usuário logado. 
-
-## Mockup - Alert
+## 🎨 Mockup - Alert
 
 Realizei a prototipação inicial do alert utilizando o Figma. 
 
